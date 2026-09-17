@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio-transcriber"
+version = "0.1.0"
+description = "A small OpenRouter audio transcription CLI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "audio-transcriber contributors" }]
+dependencies = []
+
+[project.scripts]
+audio-transcriber = "audio_transcriber.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
